@@ -1,0 +1,19 @@
+body{
+    background-color: #3b3b3b;
+    color: white;
+    font-family: Helvetica, Arial, sans-serif;
+} 
+a{
+    color:salmon;
+}
+h1{
+    @font-face{/*Basic Latin*/
+        font-family:'McKay';
+        font-style:Normal;
+        font-weight:400;
+        unicode-range:u+9-a,u+d,u+20-7e;
+        src:url('40k00.woff2') format('woff2'),url('40k00.woff') format('woff');
+}}
+img {
+    width: 500px;
+}
