@@ -19,12 +19,17 @@ nav{
     justify-content: space-around;
     display:flex;
 }
+#content{
+    background-color: rgb(100, 175, 186, .7);
+    max-width: 1000px;
+    margin: 0 auto;
+}
 h1{
     text-align: center;
     
 }
 img {
-    width: 30%;
+    width: 95%;
     margin: 0 auto;
     display:block;
 }
