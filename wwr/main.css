@@ -1,71 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Bungee&display=swap, https://fonts.googleapis.com/css2?family=Bungee&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+body{
+    background-color: whitesmoke;
+    margin: 0;
+    padding: 0;
+    font-family: Montserrat, Helvetica, sans-serif;
+    font-size: 22px;
+}
 .logo {
-    width: 80px;
+    width: 150px;
 }
 #content{
     max-width: 1600px;
     margin: 0 auto;
 }
+header{
+    background-color: #7EBCB8;
+    display: flex;
+    padding: .5em;
+}
+nav{
+    margin-top: 2em;
+}
 nav a{
     text-align: center;
     color: #2A5450;
     text-decoration: none;
+    font-family: Bungee, Segoe UI, sans-serif;
+    font-size: 1.5em;
+    padding: 1em;
+    justify-content: space-around;
 }
 nav a:hover{
-    background-color: #845872;
-    color: white;
+    color: #845872;
     text-decoration: underline wavy;
 }
 .home-title{
     color: #2A5450;
+    font-size: 2.5em;
+    margin-top: 40px;
 }
 #hero-img{
     width:100%
 }
-#hero-msg h1, h4{
+#hero-msg h1{
     text-align: center;
+    font-family: Bungee, Segoe UI, sans-serif;
+}
+#hero-msg h4{
+    text-align: center;
+    font-family: Montserrat, Helvetica, sans-serif;
+}
+h2{
+    margin: 0;
 }
 h4{
     color: #535353;
 }
 .button-box{
     text-align: center;
+    margin: 2em;
 }
 main section{
     text-align: center;
 }
+main section img{
+    box-sizing: border-box;
+}
 #background{
     height: 725px;
-}
-body{
-    background-color: whitesmoke;
-}
-header{
-    background-color: #7EBCB8;
 }
 .book, .join{
     background-color: #2A5450;
     color: whitesmoke;
     text-decoration: none;
+    font-size: 1.5em;
+    font-family: Bungee, Segoe UI, sans-serif;
+    padding: .5em 2em;
+    margin-top: 50px;
+    border-radius: 15px;
 }
 #background{
     background-color: #845872;
 }
+.card-img{
+    border: 10px solid black;
+}
+.rivers-car, .camping-card, .rapids-card{
+    margin: 200px 0;
+}
 .msg{
     background-color: #7EBCB8;
+    padding: 30px;
 }
 .msg h2{
     color: #2A5450;
+    font-family: Bungee, Segoe UI, sans-serif;
+    font-size: 2em;
 }
 .msg p{
     color: #2A5450;
+    font-size: 1.5em;
+    line-height: 1.5em;
+    padding: 15px;
 }
 footer{
     background-color: #2A5450;
     color: whitesmoke;
+    font-size: .5em;
+    padding: 20px 60px;
+    margin-top: 200px;
 }
 footer a{
     color: whitesmoke;
     text-decoration: none;
+    
 }
 footer a:hover{
     color: #7EBCB8;
@@ -75,6 +123,9 @@ footer p a:hover{
 }
 footer p{
     font-size: 2em;
+}
+footer .social img{
+    padding-top: 15px;
 }
 .icon{
     width: 80px;
