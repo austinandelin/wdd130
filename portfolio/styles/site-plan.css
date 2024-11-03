@@ -1,4 +1,57 @@
-tr .primary{
-    background-color: #156aac;
+@font-face {
+    font-family: "Eau Douce Sans";
+    src: url("fonts/eau_douce_sans-regular.woff2") format('woff2');
+  }
+  
+  @font-face {
+    font-family: "Eau Douce Sans";
+    src: url("fonts/eau_douce_sans-bold.woff2") format('woff2');
+    font-weight: bold;
+  }
+  
+  @font-face {
+    font-family: "Eau Douce Sans";
+    src: url("fonts/eau_douce_sans-heavy.woff2") format('woff2');
+    font-weight: heavy;
+  }
+  
+  @font-face {
+    font-family: "Eau Douce Sans";
+    src: url("fonts/eau_douce_sans-light.woff2") format('woff2');
+    font-weight: light;
+  }
+  @font-face {
+    font-family: "Eau Douce Sans";
+    src: url("fonts/eau_douce_sans-medium.woff2") format('woff2');
+    font-weight: medium;
+  }
+  @font-face {
+    font-family: "Eau Douce Sans";
+    src: url("fonts/eau_douce_sans-thin.woff2") format('woff2');
+    font-weight: thin;
+  }
+#logo{
+    width: 200px;
+} 
+.primary{
+    background-color: #156bac;
     height: 50px;
+}
+.secondary{
+    background-color: #81afd3;
+    height: 50px;
+}
+.accent1{
+    background-color: #cc781e;
+    height: 50px;
+}
+h3{
+    font-family: Jost, Arial, Helvetica, sans-serif;
+}
+p{
+    font-family: Eau Douce Sans, Arial, Helvetica, sans-serif;
+}
+
+.colored{
+    color: #156bac;
 }
