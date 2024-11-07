@@ -205,6 +205,39 @@ footer .social img{
 .icon{
     width: 80px;
 }
+#faq-page{
+    width: 80%;
+}
+.accordion {
+    background-color: whitesmoke;
+    color: #444;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    text-align: left;
+    border: none;
+    outline: none;
+    transition: 0.4s;
+  }
+  
+  /* Style the accordion panel. Note: hidden by default */
+  .panel {
+    padding: 0 18px;
+    background-color: whitesmoke;
+    display: none;
+    overflow: hidden;
+  }
+  .accordion:after {
+    content: '\2B9F'; /* Unicode character for "plus" sign (+) */
+    font-size: 13px;
+    color: #ffffff;
+    float: right;
+    margin-left: 5px;
+  }
+  
+  .active:after {
+    content: "\2B9D"; /* Unicode character for "minus" sign (-) */
+  }
 @media screen and (max-width: 900px) {
     #hero, .home-grid {
         display: block;
