@@ -1,0 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Arvo:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+.content{
+    width: 300px;
+    margin: 0;
+}
+.hero{
+    width: 100%;
+}
+.textbox{
+    text-align: center;
+}
+.buttonbox{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    background-color: steelblue;
+    color: white;
+}
+.box{
+    width: 100px;
+    padding: 15px;
+    box-sizing: border-box;
+}
