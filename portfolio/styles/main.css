@@ -1,0 +1,66 @@
+@font-face {
+    font-family: "Eau Douce Sans";
+    src: url("fonts/eau_douce_sans-regular.woff2") format('woff2');
+  }
+  
+  @font-face {
+    font-family: "Eau Douce Sans";
+    src: url("fonts/eau_douce_sans-bold.woff2") format('woff2');
+    font-weight: bold;
+  }
+  
+  @font-face {
+    font-family: "Eau Douce Sans";
+    src: url("fonts/eau_douce_sans-heavy.woff2") format('woff2');
+    font-weight: heavy;
+  }
+  
+  @font-face {
+    font-family: "Eau Douce Sans";
+    src: url("fonts/eau_douce_sans-light.woff2") format('woff2');
+    font-weight: light;
+  }
+  @font-face {
+    font-family: "Eau Douce Sans";
+    src: url("fonts/eau_douce_sans-medium.woff2") format('woff2');
+    font-weight: medium;
+  }
+  @font-face {
+    font-family: "Eau Douce Sans";
+    src: url("fonts/eau_douce_sans-thin.woff2") format('woff2');
+    font-weight: thin;
+  }
+body{
+    background-color: whitesmoke;
+    margin: 0;
+    padding: 0;
+    font-family: Eau Douce Sans, Helvetica, sans-serif;
+    font-size: 22px;
+}
+h1{
+    font-size: 32pt;
+}
+h2{
+    font-size: 24pt;
+}
+#home-grid{
+    margin: 100px;
+    display: flex;
+}
+.project-card{
+    position: relative;
+    width: 800px;
+}
+#rrg-hero-img, #emree-hero-img {
+    position: absolute;
+    width: inherit;
+}
+
+.project-card h2{
+    position: absolute;
+    width: inherit;
+    color: white;
+    top: 400px;
+    left: 40px;
+}
+
