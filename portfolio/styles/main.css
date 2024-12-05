@@ -31,7 +31,7 @@
     font-weight: thin;
   }
 body{
-    background-color: whitesmoke;
+    background-color: #f5f5f5;
     margin: 0;
     padding: 0;
     font-family: Eau Douce Sans, Helvetica, sans-serif;
@@ -44,9 +44,61 @@ body{
 }
 h1{
     font-size: 32pt;
+    font-family: Jost, Arial, Helvetica, sans-serif;
+    font-weight: 700;
 }
 h2{
     font-size: 24pt;
+}
+h3{
+  font-size: 24pt;
+  font-family: Jost, Helvetica, sans-serif;
+  font-weight: 500;
+}
+h4{
+  font-family: Eau Douce Sans, Helvetica, sans-serif;
+  font-weight: 400;
+  font-size: 22pt;
+}
+nav{
+  display: flex;
+  justify-content: space-around;
+  background-color: #e6e5e5;
+}
+#logo{
+  width: 350px;
+    justify-self: center;
+    align-self: center;
+
+}
+nav a{
+  font-size: 24pt;
+  color:#212121;
+  text-decoration: none;
+  padding: 1em;
+  justify-content: space-around;
+  font-family: Effra, Times New Roman;
+  text-align: center;
+}
+nav a:hover{
+  color: #156bac;
+}
+footer{
+  display: flex;
+  justify-content: space-around;
+  background-color: #156bac;
+  height: 400px;
+  color: #f5f5f5;
+  padding: 1em ;
+  padding-top: 5em;
+}
+footer p{
+  margin: 0;
+}
+#footer-links a{
+  padding: 1em ;
+  color: #f5f5f5;
+  text-decoration: none;
 }
 #home-grid{
     margin: 100px 100px;
@@ -72,11 +124,11 @@ h2{
 }
 #emree{
   background-image: linear-gradient(to bottom, rgba(0, 0, 0, .0), rgba(0, 0, 0, .75)), 
-  url(/wdd130/portfolio/images/emree_hero1.jpg);
+  url(../images/emree_hero1.jpg);
 }
 #august{
   background-image: linear-gradient(to bottom, rgba(0, 0, 0, .0), rgba(0, 0, 0, .75)), 
-  url(/wdd130/portfolio/images/project-mockup.png);
+  url(../images/project-mockup.png);
 }
 
 .overlay-text{
@@ -93,15 +145,10 @@ h2{
     bottom: 16px;
   }
 }
-.overlay-text h2{
-  font-size: 32pt;
-  font-family: Jost, Arial, Helvetica, sans-serif;
-  font-weight: bold;
+.overlay-text h1{
   line-height: 0pt;
 }
 .overlay-text h4{
-  font-family: Eau Douce Sans, Helvetica, sans-serif;
-  font-weight: 400;
   line-height: 8pt;
   color: #ccc;
 }
@@ -205,6 +252,7 @@ button {
      between the labels and their text fields */
   margin-left: 0.5em;
 }
+
 @media screen and (max-width: 900px) {
   #home-grid{
     flex-direction: column;
