@@ -184,8 +184,13 @@ footer p{
   height: 400px;
   background-size: cover;
   background-position: center;
-  background-image: url(../images/rrg_hero1.png);
   margin-bottom: 50px;
+}
+#rrg-hero-img{
+  background-image: url(../images/rrg_hero1.png);
+}
+#emree-jolley-img{
+  background-image: url(../images/emree_hero1.jpg.png);
 }
 .project-text h1, h4{
   margin: 0;
