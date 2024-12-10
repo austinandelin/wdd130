@@ -1,25 +1,3 @@
-<?php
-//You must ftp this page and the processmail.php before you can see the mail actually working
-$errors = [];
-$missing = [];
-//check if the form has been submitted
-if (isset($_POST['send'])) {
- $to = 'austin.andelin@outlook.com'; 
- $subject = 'Comments & Questions from therapyidahofalls.com';
- //list expected fields - to prevent injectors from injecting other fields
- $expected = ['first_name', 'last_name', 'email', 'comments'];
- //set required fields
- $required = ['first_name', 'email', 'comments'];
- //create additional headers
- $headers = "From: TherapyIdahoFalls\r\n";
- $headers .= "Content-Type: text/plain; charset=utf-8";
- require '../files/processmail.php'; 
- if ($mailSent) {
-     //next line sends them to thank you page when mail was sent successfully
-     header('Location: http://austinandelin.github.io/wdd130/portfolio/index.html');
-     exit;
- }
-}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -41,104 +19,16 @@ if (isset($_POST['send'])) {
             </div>
         </nav>    
     </header>
-    <p>Nothing Here Yet :)</p>
-    <article id="form">
-        <h1>Contact Foothills Rehabilitation - Physical Therapy - Idaho Falls</h1>
+    <p>Nothing Here Yet :</p>
+    <form action="send_email.php" method="post">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required><br><br>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required><br><br>
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" required></textarea><br><br>
+        <input type="submit" value="Send">
+      </form>      
         
-        <!--PHP for the form msg if missing info-->
-        <?php if (($_POST && $suspect) || ($_POST && isset($errors['mailfail']))) { ?>
-          <p class="warning">Sorry, your mail could not be sent. Please try later.</p>
-        <?php } elseif ($missing || $errors) { ?>
-          <p class="warning">Please fix the items(s) indicated.</p>
-        <?php } ?>
-        <!-- end of warning -->
-
-        <p>&nbsp;</p>
-        <table>
-          <form action="" method="post" enctype="text/plain" name="contact" id="contact">
- 
-            <table border="0">
-              <tr>
-                <td width="144">
-                <!--PHP within the label tag is backend validation for required info from user-->
-                <label for="first_name">First Name *:
-                <?php if ($missing && in_array('first_name', $missing)) { ?>
-                  <span class="warning">Please enter your first name</span>
-                <?php } ?>
-                </label>
-                </td>
-                </tr>
-              <tr>
-                <td>
-                <!--PHP within the input tag makes form sticky-->
-                <input name="first_name" type="text" id="first_name" size="30" maxlength="60" required=required
-                  <?php if ($missing || $errors) {
-                  echo 'value="' . htmlentities($first_name). '"';
-                  } ?>
-                  >     <!--this ending angle bracket closes the input tag-->
-                </td>
-                </tr>
-              <tr>
-                <td>
-                <label for="last_name">Last Name:
-                <?php if ($missing && in_array('last_name', $missing)) { ?>
-                  <span class="warning">Please enter your last name</span>
-                <?php } ?>
-                </label>
-                </td>
-                </tr>
-              <tr>
-                <td><input name="last_name" type="text" id="last_name" size="30" maxlength="60"
-                <?php if ($missing || $errors) {
-                  echo 'value="' . htmlentities($last_name). '"';
-                  } ?>
-                  >
-                </td>
-                </tr>
-              <tr>
-                <td width="144">
-                <label for="email">E-mail *:
-                <?php if ($missing && in_array('email', $missing)) { ?>
-                  <span class="warning">Please enter your e-mail</span>
-                <?php } elseif (isset($errors['email'])) { ?>
-                  <span class="warning">Invalid email address</span>
-                <?php } ?>
-                </label>
-                </td>
-                </tr>
-              <tr>
-                <td><input name="email" type="text" id="email" size="30" maxlength="60" required=required
-                <?php if ($missing || $errors) {
-                  echo 'value="' . htmlentities($email).'"';
-                } ?>
-                >
-                </td>
-                </tr>
-              <tr>
-                <td>
-                <label for="comments">Comment/Question *:
-                <?php if ($missing && in_array('comments', $missing)) { ?>
-                  <span class="warning">Please enter your comment or question</span>
-                <?php } ?>
-                </label>
-                </td>
-                </tr>
-              <tr>
-                <td height="110">   
-                <textarea name="comments"  id="comments" required>
-                <?php
-                if ($missing || $errors) {
-                  echo htmlentities($comments);
-                } ?>
-                </textarea>
-                </td>
-              </tr>
-              <tr>
-                <td height="10"><input type="submit" name="submit" id="submit" value="Send" subject="inquery/comments" onclick="gtag('event', 'ContactForm');"><input type="reset"  value="Reset"></td>
-        
-                </tr>
-            </table>
-          </form>
-      </article>
 </body>
 </html>
