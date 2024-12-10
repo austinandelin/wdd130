@@ -20,6 +20,38 @@
         </nav>    
     </header>
     <p>Nothing Here Yet :</p>
+    <form
+  action="https://formspree.io/f/xbljeaeg"
+  class="fs-form"
+  target="_top"
+  method="POST"
+>
+  <div class="fs-field">
+    <label class="fs-label" for="name">Your Name</label>
+    <input class="fs-input" id="name" name="name" required />
+  </div>
+  <div class="fs-field">
+    <label class="fs-label" for="email">Email</label>
+    <input class="fs-input" id="email" name="email" required />
+    <p class="fs-description">
+      This will help me respond to you through email.
+    </p>
+  </div>
+  <div class="fs-field">
+    <label class="fs-label" for="message">Message</label>
+    <textarea
+      class="fs-textarea"
+      id="message"
+      name="message"
+      required
+    ></textarea>
+    <p class="fs-description">What would you like to talk about?</p>
+  </div>
+  <div class="fs-button-group">
+    <button class="fs-button" type="submit">Submit</button>
+  </div>
+</form>
+    <!-- THIS IS HOMEBREW FORM
     <form action="send_email.php" method="post">
         <label for="name">Name:</label>
         <input type="text" id="name" name="name" required><br><br>
@@ -29,6 +61,6 @@
         <textarea id="message" name="message" required></textarea><br><br>
         <input type="submit" value="Send">
       </form>      
-        
+         -->
 </body>
 </html>
