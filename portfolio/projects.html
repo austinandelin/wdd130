@@ -16,7 +16,7 @@ if (isset($_POST['send'])) {
  require '../files/processmail.php'; 
  if ($mailSent) {
      //next line sends them to thank you page when mail was sent successfully
-     header('Location: http://www.therapyidahofalls.com');
+     header('Location: http://austinandelin.github.io/wdd130/portfolio/index.html');
      exit;
  }
 }
@@ -124,7 +124,7 @@ if (isset($_POST['send'])) {
                 </td>
                 </tr>
               <tr>
-                <td height="110">
+                <td height="110">   
                 <textarea name="comments"  id="comments" required>
                 <?php
                 if ($missing || $errors) {
