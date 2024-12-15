@@ -30,23 +30,37 @@
     </section>
     <section id='feedback-total'>
         <div id="feedback">Get In Touch With Me!</div>
-        <form action="#" method="post">
-            <p>
-              <label for="name">Name:</label>
-              <input type="text" id="name" name="user_name" required/>
-            </p>
-            <p>
-              <label for="mail">Email:</label>
-              <input type="email" id="mail" name="user_email" required placeholder='email@web.com'/>
-            </p>
-            <p>
-              <label for="msg">Message:</label>
-              <textarea id="msg" name="user_message"></textarea>
-            </p>
-            <p class='button'>
-                <button type='submit'>Send your message!</button>
-            </p>
-          </form>
+        <form
+  action="https://formspree.io/f/xbljeaeg"
+  class="fs-form"
+  target="_top"
+  method="POST"
+>
+  <div class="fs-field">
+    <label class="fs-label" for="name">Your Name</label>
+    <input class="fs-input" id="name" name="name" required />
+  </div>
+  <div class="fs-field">
+    <label class="fs-label" for="email">Email</label>
+    <input class="fs-input" id="email" name="email" required />
+    <p class="fs-description">
+      This will help me respond to you through email.
+    </p>
+  </div>
+  <div class="fs-field">
+    <label class="fs-label" for="message">Message</label>
+    <textarea
+      class="fs-textarea"
+      id="message"
+      name="message"
+      required
+    ></textarea>
+    <p class="fs-description">What would you like to talk about?</p>
+  </div>
+  <div class="fs-button-group">
+    <button class="fs-button" type="submit">Submit</button>
+  </div>
+</form>
         </section>
     <script>
         // get the feedback div element so we can do something with it.
