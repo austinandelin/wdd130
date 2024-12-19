@@ -71,10 +71,10 @@ header{
   min-height: 50px;
 }
 nav{
-  /* display: flex;
-  justify-content: space-between; */
-  display: grid;
-  grid-template-columns: 350px 1fr;
+  display: flex;
+  justify-content: space-between;
+  /* display: grid;
+  grid-template-columns: 350px 1fr; */
   background-color: #e6e5e5;
 }
 #logo{
@@ -100,6 +100,7 @@ nav a{
   margin-right: 50px;
   display: flex;
   justify-content: flex-end;
+  /* flex-direction: row; */
 }
 nav a:hover{
   color: #156bac;
@@ -183,6 +184,7 @@ footer p{
 .overlay-text h4{
   line-height: 18pt;
   color: rgb(204, 204, 204, 0);
+  margin: 0;
 }
 
 /* PROJECT PAGE */
@@ -200,8 +202,12 @@ footer p{
 #emree-jolley-img{
   background-image: url(../images/emree_hero1.jpg.png);
 }
-.project-text h1, h4{
+.project-text h1, .project-text h4{
   margin: 0;
+}
+.project-text{
+  margin: 0 auto;
+  width: 80%;
 }
 
 /* About Page */
@@ -630,7 +636,22 @@ button {
 }
 
 @media screen and (max-width: 900px) {
-  #home-grid{
+  #home-grid {
     flex-direction: column;
+  }
+  nav {
+    flex-direction: column;
+  }
+  #nav-links {
+    flex-direction: column;
+    margin: 0 auto;
+
+  }
+  #logo-link {
+    margin: 0 auto;
+    padding: 0;
+  }
+  #logo{
+    padding: 30px 0 0 10px;
   }
 }
